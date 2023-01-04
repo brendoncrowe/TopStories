@@ -16,6 +16,7 @@
 		40C4C3B52963BB7B00FB694B /* topStoriesTechnology.json in Resources */ = {isa = PBXBuildFile; fileRef = 40C4C3B42963BB7B00FB694B /* topStoriesTechnology.json */; };
 		40C4C3B72963BC1C00FB694B /* NewsHeadline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C4C3B62963BC1C00FB694B /* NewsHeadline.swift */; };
 		40C4C3B92964CD4900FB694B /* HeadlineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C4C3B82964CD4900FB694B /* HeadlineCell.swift */; };
+		40EC78602965060C00DC9E4C /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EC785F2965060C00DC9E4C /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		40C4C3B42963BB7B00FB694B /* topStoriesTechnology.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = topStoriesTechnology.json; sourceTree = "<group>"; };
 		40C4C3B62963BC1C00FB694B /* NewsHeadline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsHeadline.swift; sourceTree = "<group>"; };
 		40C4C3B82964CD4900FB694B /* HeadlineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineCell.swift; sourceTree = "<group>"; };
+		40EC785F2965060C00DC9E4C /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				40C4C3A02963BB3000FB694B /* AppDelegate.swift */,
 				40C4C3A22963BB3000FB694B /* SceneDelegate.swift */,
 				40C4C3A42963BB3000FB694B /* NewsFeedController.swift */,
+				40EC785F2965060C00DC9E4C /* DetailView.swift */,
 				40C4C3B62963BC1C00FB694B /* NewsHeadline.swift */,
 				40C4C3B82964CD4900FB694B /* HeadlineCell.swift */,
 				40C4C3B42963BB7B00FB694B /* topStoriesTechnology.json */,
@@ -149,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				40C4C3B72963BC1C00FB694B /* NewsHeadline.swift in Sources */,
+				40EC78602965060C00DC9E4C /* DetailView.swift in Sources */,
 				40C4C3A52963BB3000FB694B /* NewsFeedController.swift in Sources */,
 				40C4C3B92964CD4900FB694B /* HeadlineCell.swift in Sources */,
 				40C4C3A12963BB3000FB694B /* AppDelegate.swift in Sources */,

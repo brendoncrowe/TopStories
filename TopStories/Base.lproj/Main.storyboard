@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Top Stories - Technology -->
+        <!--Top Stories-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="NewsFeedController" customModule="TopStories" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qX5-U4-9AJ">
-                                <rect key="frame" x="0.0" y="159" width="393" height="659"/>
+                                <rect key="frame" x="0.0" y="206" width="393" height="612"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="headlineCell" rowHeight="218" id="qMm-Hd-rmW" customClass="HeadlineCell" customModule="TopStories" customModuleProvider="target">
@@ -63,13 +63,18 @@
                                             <outlet property="bylineLabel" destination="aFe-67-IhG" id="drj-6w-lIy"/>
                                             <outlet property="headlineImageView" destination="oNA-Pd-yBp" id="mil-un-5zO"/>
                                             <outlet property="headlineTitleLabel" destination="DJz-cb-mmS" id="m7i-Os-jL6"/>
+                                            <segue destination="xXU-gE-eyH" kind="show" id="6sp-Ft-giq"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <searchBar contentMode="redraw" placeholder="search by title" translatesAutoresizingMaskIntoConstraints="NO" id="nq9-fk-txR">
-                                <rect key="frame" x="0.0" y="103" width="393" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
+                            <searchBar contentMode="redraw" placeholder="search by title" showsScopeBar="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nq9-fk-txR">
+                                <rect key="frame" x="0.0" y="103" width="393" height="103"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Abstract</string>
+                                </scopeButtonTitles>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="ysf-wz-D4Z"/>
                                 </connections>
@@ -87,7 +92,7 @@
                             <constraint firstItem="nq9-fk-txR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="od1-YY-l5t"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Top Stories - Technology " id="7c5-hG-cNg"/>
+                    <navigationItem key="navigationItem" title="Top Stories" id="7c5-hG-cNg"/>
                     <connections>
                         <outlet property="searchBar" destination="nq9-fk-txR" id="Lna-ju-ex7"/>
                         <outlet property="tableView" destination="qX5-U4-9AJ" id="MFj-su-2Wn"/>
@@ -96,6 +101,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1028.2442748091603" y="3.5211267605633805"/>
+        </scene>
+        <!--Detail View-->
+        <scene sceneID="Dt6-pE-4Vm">
+            <objects>
+                <viewController id="xXU-gE-eyH" customClass="DetailView" customModule="TopStories" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0I8-57-Ejn">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="c1e-eU-BG0">
+                                <rect key="frame" x="0.0" y="104.66666666666666" width="393" height="295.33333333333326"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urv-tW-33t">
+                                <rect key="frame" x="20" y="421.33333333333337" width="353" height="376.33333333333337"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By Brendon Crowe" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJQ-S1-A3h">
+                                <rect key="frame" x="20" y="805.66666666666663" width="353" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OMy-ZD-fox"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CJQ-S1-A3h" firstAttribute="leading" secondItem="OMy-ZD-fox" secondAttribute="leading" constant="20" id="0Jd-kN-KnK"/>
+                            <constraint firstItem="OMy-ZD-fox" firstAttribute="trailing" secondItem="urv-tW-33t" secondAttribute="trailing" constant="20" id="7oA-qt-hdL"/>
+                            <constraint firstItem="OMy-ZD-fox" firstAttribute="trailing" secondItem="CJQ-S1-A3h" secondAttribute="trailing" constant="20" id="Doi-Wz-Kfl"/>
+                            <constraint firstItem="c1e-eU-BG0" firstAttribute="top" secondItem="OMy-ZD-fox" secondAttribute="top" id="H7z-yf-Jxo"/>
+                            <constraint firstItem="c1e-eU-BG0" firstAttribute="leading" secondItem="OMy-ZD-fox" secondAttribute="leading" id="Noq-af-Mmq"/>
+                            <constraint firstItem="urv-tW-33t" firstAttribute="top" secondItem="c1e-eU-BG0" secondAttribute="bottom" constant="20" id="SA1-XA-JH2"/>
+                            <constraint firstItem="CJQ-S1-A3h" firstAttribute="top" secondItem="urv-tW-33t" secondAttribute="bottom" constant="8" id="TRL-Kt-q05"/>
+                            <constraint firstItem="c1e-eU-BG0" firstAttribute="height" secondItem="0I8-57-Ejn" secondAttribute="height" multiplier="0.35" id="UTm-5t-XMs"/>
+                            <constraint firstItem="OMy-ZD-fox" firstAttribute="trailing" secondItem="c1e-eU-BG0" secondAttribute="trailing" id="Xtz-J5-nGL"/>
+                            <constraint firstItem="CJQ-S1-A3h" firstAttribute="bottom" secondItem="OMy-ZD-fox" secondAttribute="bottom" constant="8" id="oc2-9D-gVo"/>
+                            <constraint firstItem="urv-tW-33t" firstAttribute="leading" secondItem="OMy-ZD-fox" secondAttribute="leading" constant="20" id="zUf-4k-kEf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="wmL-Zp-ygW"/>
+                    <connections>
+                        <outlet property="bylineLabel" destination="CJQ-S1-A3h" id="QKw-w9-Y2m"/>
+                        <outlet property="headlineAbstract" destination="urv-tW-33t" id="GSs-su-LMG"/>
+                        <outlet property="headlineImage" destination="c1e-eU-BG0" id="zn2-xR-6b7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yYb-fC-htX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1794.6564885496182" y="3.5211267605633805"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2Xi-dB-I14">
@@ -118,6 +176,9 @@
     </scenes>
     <resources>
         <image name="photo.fill" catalog="system" width="128" height="93"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
