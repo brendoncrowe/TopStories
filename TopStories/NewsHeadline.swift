@@ -8,7 +8,8 @@
 import Foundation
 
 // top level JSON - HeadlinesData.self because top level JSON is a dictionary
-struct HeadlinesData: Codable { // Codable allows objects to be decoded from JSON
+struct HeadlinesData: Codable {
+    // Codable allows objects to be decoded from JSON
     let results: [NewsHeadline] // "results" represents the JSON array of stories
 }
 
@@ -16,6 +17,24 @@ struct NewsHeadline: Codable {
     let title: String
     let abstract: String
     let byline: String
+    let multimedia: [Multimedia] // and array of multimedia items
+}
+
+struct Multimedia: Codable {
+    let url: String
+    let caption: String
+    let format: String // "thumbLarge" and "superJumbo"
+    
+}
+
+// this extension filters and returns a computed property
+extension NewsHeadline {
+    var thumbImage: Multimedia? {
+        return multimedia.filter { $0.format == "thumbLarge" }.first
+    }
+    var superJumbo: Multimedia? {
+        return multimedia.filter { $0.format == "superJumbo" }.first
+    }
 }
 
 extension HeadlinesData {
@@ -34,7 +53,6 @@ extension HeadlinesData {
         // get the data from the contents of the file url
         do {
             let data = try Data(contentsOf: pathToData) // if a method could throw an error, it must be marked with try
-            
             
             // JSONDecoder decodes JSON into swift objects such as HeadlinesData
             let headlinesData = try JSONDecoder().decode(HeadlinesData.self, from: data)

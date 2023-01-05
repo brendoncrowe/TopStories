@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		402972E729665D83002396DF /* ImageClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402972E629665D83002396DF /* ImageClient.swift */; };
 		40C4C3A12963BB3000FB694B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C4C3A02963BB3000FB694B /* AppDelegate.swift */; };
 		40C4C3A32963BB3000FB694B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C4C3A22963BB3000FB694B /* SceneDelegate.swift */; };
 		40C4C3A52963BB3000FB694B /* NewsFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C4C3A42963BB3000FB694B /* NewsFeedController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		402972E629665D83002396DF /* ImageClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClient.swift; sourceTree = "<group>"; };
 		40C4C39D2963BB3000FB694B /* TopStories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopStories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40C4C3A02963BB3000FB694B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40C4C3A22963BB3000FB694B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,8 +70,9 @@
 				40C4C3A22963BB3000FB694B /* SceneDelegate.swift */,
 				40C4C3A42963BB3000FB694B /* NewsFeedController.swift */,
 				40EC785F2965060C00DC9E4C /* DetailView.swift */,
-				40C4C3B62963BC1C00FB694B /* NewsHeadline.swift */,
 				40C4C3B82964CD4900FB694B /* HeadlineCell.swift */,
+				40C4C3B62963BC1C00FB694B /* NewsHeadline.swift */,
+				402972E629665D83002396DF /* ImageClient.swift */,
 				40C4C3B42963BB7B00FB694B /* topStoriesTechnology.json */,
 				40C4C3A62963BB3000FB694B /* Main.storyboard */,
 				40C4C3A92963BB3100FB694B /* Assets.xcassets */,
@@ -157,6 +160,7 @@
 				40C4C3B92964CD4900FB694B /* HeadlineCell.swift in Sources */,
 				40C4C3A12963BB3000FB694B /* AppDelegate.swift in Sources */,
 				40C4C3A32963BB3000FB694B /* SceneDelegate.swift in Sources */,
+				402972E729665D83002396DF /* ImageClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
