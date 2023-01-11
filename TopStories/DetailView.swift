@@ -35,6 +35,7 @@ class DetailView: UIViewController {
                     print("error - \(error)")
                 case .success(let image):
                     DispatchQueue.main.async {
+                        // TODO: UIActivityIndicator() shows the user an indicator of the download progress
                         self.headlineImage.image = image
                     }
                 }
